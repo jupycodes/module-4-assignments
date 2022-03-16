@@ -17,16 +17,16 @@ class Students {
 }
    
 class UnderGraduate extends Students implements Iundergrad{
-    batch: string;
-    gpa: number
+    batch: number;
 
-    constructor(name:string, age:number, nationality:string, batch: string, gpa:number) {
+
+    constructor(name:string, age:number, nationality:string, batch: number, gpa:number) {
         super(name,age,nationality);   
     }
 }
 
 interface Iundergrad{
-    batch: string;
+    batch: number;
     name: string;
     age: number;
     gender: string;
@@ -34,5 +34,5 @@ interface Iundergrad{
     gpa: number;
 }
 
-let student_1 = new UnderGraduate("Jennifer Lopez", 50, "Puerto Rican", "A", 3.5)
+let student_1 = new UnderGraduate("Jennifer Lopez", 50, "Puerto Rican", 4, 3.5)
 student_1.getNationality()
